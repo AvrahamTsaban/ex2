@@ -67,14 +67,14 @@ int main()
                     }
                     // store quak decision in bitmask
                     if(doQuak == 1) {
-                        quakList |= ((unsigned long)1 << i);
+                        quakList |= ((unsigned long long)1 << i);
                     }
                 }
                 // Recall whom did quak and whom didn't
                 unsigned long memoryScreen;
                 for(int i = 0; i < ducksNumber; i++) {
                     // get the mask to point to the current i+1 duck
-                    memoryScreen = (unsigned long)1<<i;
+                    memoryScreen = (unsigned long long)1<<i;
                     // check if the duck quaked and print the appropriate message
                     if((quakList & memoryScreen) != 0) {
                         printf("duck number %d do Quak\n", i+1);
