@@ -15,7 +15,7 @@ int main()
         printf("1. Ducky's Unity Game\n2. The Memory Game\n");
         printf("3. Professor Pat's Power Calculation\n4. The Duck Parade\n");
         printf("5. The Mystery of the Repeated Digits\n6. Good Night Ducks\n");
-        scanf("%d", &menuChoice);
+        (void)scanf("%d", &menuChoice);
         switch (menuChoice)
         {
         // TASK 1: Ducky's Unity Game
@@ -23,10 +23,10 @@ int main()
                 // Get positive riddle number for ducky and validate it
                 int riddleNumber;
                 printf("please enter a positive number:\n");
-                scanf("%d", &riddleNumber);
+                (void)scanf("%d", &riddleNumber);
                 while(riddleNumber <= 0) {
                     printf("Invalid number, please try again\n");
-                    scanf("%d", &riddleNumber);
+                    (void)scanf("%d", &riddleNumber);
                 } 
                 // count 1 bits amount in riddle number (consuming it for efficient calculation)
                 short corn = 0;
@@ -47,10 +47,10 @@ int main()
                 const int maxMemoryDucks = 64;
                 int ducksNumber;
                 printf("please enter the number of ducks:\n");
-                scanf("%d", &ducksNumber);
+                (void)scanf("%d", &ducksNumber);
                 while(ducksNumber > maxMemoryDucks || ducksNumber <= 0) {
                     printf("Invalid number, please try again\n");
-                    scanf("%d", &ducksNumber);
+                    (void)scanf("%d", &ducksNumber);
                 }
                 printf("you entered %d ducks\n", ducksNumber);
                 // Iterate over all ducks to get quak input from user
@@ -59,10 +59,10 @@ int main()
                 for(int i = 0; i < ducksNumber; i++) {
                     printf("duck %d do QUAK? 1 for yes, 0 for no\n", i+1);
                     // let user decide wether or not they quak (validating input)
-                    scanf("%d", &doQuak);
+                    (void)scanf("%d", &doQuak);
                     while((doQuak < 0) || (doQuak > 1)) {
                         printf("Invalid number, please try again\n");
-                        scanf("%d", &doQuak);
+                        (void)scanf("%d", &doQuak);
                     }
                     // store quak decision in bitmask
                     if(doQuak == 1) {
@@ -89,16 +89,16 @@ int main()
                 int base, exponent;
                 int result = 1;
                 printf("please enter the number\n");
-                scanf("%d", &base);
+                (void)scanf("%d", &base);
                 while(base < 0) {
                     printf("Invalid number, please try again\n");
-                    scanf("%d", &base);
+                    (void)scanf("%d", &base);
                 } 
                 printf("please enter the exponent\n");
-                scanf("%d", &exponent);
+                (void)scanf("%d", &exponent);
                 while(exponent < 0) {
                     printf("Invalid number, please try again\n");
-                    scanf("%d", &exponent);
+                    (void)scanf("%d", &exponent);
                 } 
                 // calculate power and print result
                 for (; exponent > 0; exponent--)
@@ -113,10 +113,10 @@ int main()
                 // get ducks number from user and validate their number
                 int paradeLength;
                 printf("please enter number of ducks:\n");
-                scanf("%d", &paradeLength);
+                (void)scanf("%d", &paradeLength);
                 while(paradeLength < 0) {
                     printf("Invalid number, please try again\n");
-                    scanf("%d", &paradeLength);
+                    (void)scanf("%d", &paradeLength);
                 } 
                 // setup counter and print the parade in rows until no ducks are left
                 int counter;
@@ -152,10 +152,10 @@ int main()
                 // prompt user to provide the mysterious number and validate it
                 int codeNumber;
                 printf("please enter number\n");
-                scanf("%d", &codeNumber);
+                (void)scanf("%d", &codeNumber);
                 while(codeNumber <= 0) {
                     printf("Invalid number, please try again\n");
-                    scanf("%d", &codeNumber);
+                    (void)scanf("%d", &codeNumber);
                 }
                 // recognize repeated digits and print them
                 unsigned int digitMask = 0;
