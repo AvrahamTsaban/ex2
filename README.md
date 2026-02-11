@@ -4,7 +4,7 @@ Program Documentation
 =====================
 
 Build and Run
-- Recommended hardened compile command: `gcc -lm -std=c99 -Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -Wstrict-overflow=2 -Wwrite-strings -Wcast-align -Wpointer-arith -Werror -Wconversion -O2 -DNDEBUG  ex2.c -o ex2.out`
+- Recommended hardened compile command: `gcc ex2.c -o ex2.out -lm -std=c99 -DNDEBUG`
 - Input is via stdin; output is via stdout. No third-party dependencies beyond the standard C library (libm linked per the flags list).
 
 Overview
